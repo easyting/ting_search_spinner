@@ -1,0 +1,7 @@
+name = Ting search spinner
+description = Spinner for Ting's Search Module.
+core = 7.x
+dependencies[] = search
+dependencies[] = ting_search
+scripts[] = js/ting_search_spinner.js
+stylesheets[all][] = css/ting_search_spinner.css

@@ -1,0 +1,10 @@
+<?php
+/**
+ * Function initializing the path needed for fetching .gif file.
+ * 
+ */
+function ting_search_spinner_init(){
+    global $base_url;
+    $path = drupal_get_path('module', 'ting_search_spinner');
+    drupal_add_js(array('spinner' => array('path' => $base_url . '/' . $path)), 'setting');
+  }
