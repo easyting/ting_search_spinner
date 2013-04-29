@@ -1,10 +1,15 @@
 <?php
+
 /**
- * Function initializing the path needed for fetching .gif file.
- * 
+ * @file
+ * The spinner module, that introduces an overlay locking the screen on search.
  */
-function ting_search_spinner_init(){
-    global $base_url;
-    $path = drupal_get_path('module', 'ting_search_spinner');
-    drupal_add_js(array('spinner' => array('path' => $base_url . '/' . $path)), 'setting');
-  }
+
+/**
+ * Implements hook_init().
+ */
+function ting_search_spinner_init() {
+  global $base_url;
+  $path = drupal_get_path('module', 'ting_search_spinner');
+  drupal_add_js(array('spinner' => array('path' => $base_url . '/' . $path), 'stop_string' => t('Stop search')), 'setting');
+}
