@@ -10,12 +10,13 @@
   margin-right: auto;
   background: black;
 }
-.ting-search-spinner-placeholder-wrapper{
-  position: absolute;
-  top: 200px;
-  left: 200px;
+.overlay-spinner{
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .close-ting-search-spinner{
+  position: absolute;
   color:black;
   z-index: 1001;
 }
