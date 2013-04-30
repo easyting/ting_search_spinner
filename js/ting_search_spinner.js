@@ -22,7 +22,7 @@
     attach: function(context) {
       // Reposition elements on zoom-in or zoom-out.
       window.onresize = function() {
-        // Checm if spinner is enabled.
+        // Check if spinner is enabled.
         if ($('.overlay-spinner').length > 0) {
           $('div.ting-overlay-spinner-container').css("top", ($(window).height() - $('overlay-spinner').height()) / 2 + $(window).scrollTop() + "px");
           $('div.ting-overlay-spinner-container').css("left", ($(window).width() - $('overlay-spinner').width()) / 2 + $(window).scrollLeft() + "px");
@@ -31,7 +31,7 @@
         }
       }
       // Append necessary html elements.
-      $('body').once().append('<div class="ting-search-spinner-placeholder-overlay"></div><div class="ting-close-ting-search-spinner-container"></div><div class="close-ting-search-spinner">' + Drupal.t('Stop search') + '</div>');
+      $('body').once().append('<div class="ting-search-spinner-placeholder-overlay"></div><div class="ting-overlay-spinner-container"></div><div class="close-ting-search-spinner">' + Drupal.t('Stop search') + '</div>');
       $('.ting-search-spinner-placeholder-overlay').once().hide();
       $('.close-ting-search-spinner').once().hide();
       $('#search-block-form').submit(function(event, killPageLoad) {
@@ -50,13 +50,13 @@
         $('div.ting-overlay-spinner-container').css("position", "absolute");
         $('div.ting-overlay-spinner-container').css("top", $(window).height() / 2 + $(window).scrollTop() + "px");
         $('div.ting-overlay-spinner-container').css("left", $(window).width() / 2 + $(window).scrollLeft() + "px");
+        $('div.ting-overlay-spinner-container').append(spinner.el);
         $('div.close-ting-search-spinner').css("top", ($(window).height() + 140) / 2 + $(window).scrollTop() + "px");
         $('div.close-ting-search-spinner').css("left", ($(window).width() - 65) / 2 + $(window).scrollLeft() + "px");
         // Disable writing on search field.
         $('.block-search-form form input[name="search_block_form"]').blur(); 
         // Show elements.
         $('.ting-search-spinner-placeholder-overlay').show();
-        $('div.ting-overlay-spinner-container').append(spinner.el);
         $('.close-ting-search-spinner').show();
         disable_scroll();
         return true;
