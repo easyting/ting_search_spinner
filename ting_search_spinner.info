@@ -1,6 +1,7 @@
 name = Ting search spinner
 description = Spinner for Ting's Search Module.
-package = Ding!
+package = Artesis
+version = 7.x-1.12
 core = 7.x
 dependencies[] = search
 dependencies[] = ting_search
