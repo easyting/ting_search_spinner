@@ -1,0 +1,31 @@
+.ting-search-spinner-placeholder-overlay {
+  position: absolute;
+  z-index: 1000;
+  top: 0;               
+  left: 0;               
+  width: 100%;   
+  height: 100%;   
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+  /* IE 5-7 */
+  filter: alpha(opacity=25);
+  /* Netscape */
+  -moz-opacity: 0.25;
+  /* Safari 1.x */
+  -khtml-opacity: 0.25;
+  /* Good browsers */
+  opacity: 0.25;
+  margin-left: auto;
+  margin-right: auto;
+  background: black;
+}
+.overlay-spinner{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.close-ting-search-spinner{
+  position: absolute;
+  color:black;
+  z-index: 1001;
+}
