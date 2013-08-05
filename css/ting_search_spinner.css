@@ -17,15 +17,20 @@
   opacity: 0.25;
   margin-left: auto;
   margin-right: auto;
-  background: black;
+  background: #000;
 }
-.overlay-spinner{
+
+.overlay-spinner {
   margin-left: auto;
   margin-right: auto;
 
 }
-.close-ting-search-spinner{
+
+.close-ting-search-spinner {
   position: absolute;
-  color:black;
+  color: #fff;
   z-index: 1001;
+  cursor: pointer;
+  text-decoration: underline;
 }
+
