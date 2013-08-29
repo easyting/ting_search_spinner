@@ -35,6 +35,16 @@
       $('.ting-search-spinner-placeholder-overlay').once().hide();
       $('.close-ting-search-spinner').once().hide();
       $('#search-block-form').submit(function(event, killPageLoad) {
+        // Fix bug that assigns placeholder to value on input field, present at least in IE8.
+        if ($('#edit-ting-search-extendform-creator-field').attr('placeholder') == $('#edit-ting-search-extendform-creator-field').val()) {
+          $('#edit-ting-search-extendform-creator-field').val('');
+        }
+        if ($('#edit-ting-search-extendform-title-field').attr('placeholder') == $('#edit-ting-search-extendform-title-field').val()) {
+          $('#edit-ting-search-extendform-title-field').val('');
+        }
+        if ($('#edit-ting-search-extendform-subject-field').attr('placeholder') == $('#edit-ting-search-extendform-subject-field').val()) {
+          $('#edit-ting-search-extendform-subject-field').val('');
+        }
         if (killPageLoad == true) {
           if (navigator.appName == 'Microsoft Internet Explorer') {
             document.execCommand('Stop');
