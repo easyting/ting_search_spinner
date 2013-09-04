@@ -31,7 +31,7 @@
         }
       }
       // Append necessary html elements.
-      $('body').once().append('<div class="ting-search-spinner-placeholder-overlay"></div><div class="ting-overlay-spinner-container"></div><div class="close-ting-search-spinner">' + Drupal.t('Stop search') + '</div>');
+      $('body').once().append('<div class="ting-search-spinner-placeholder-overlay-wrapper"><div class="ting-search-spinner-placeholder-overlay"></div></div><div class="ting-overlay-spinner-container"></div><div class="close-ting-search-spinner">' + Drupal.t('Stop search') + '</div>');
       $('.ting-search-spinner-placeholder-overlay').once().hide();
       $('.close-ting-search-spinner').once().hide();
       $('#search-block-form').submit(function(event, killPageLoad) {
