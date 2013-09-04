@@ -1,7 +1,7 @@
 /* Fix for z-bug in IE7 */
 .ting-search-spinner-placeholder-overlay-wrapper,
 .ting-overlay-spinner-container {
-  z-index:3000;
+  z-index: 3000;
 }
 .ting-search-spinner-placeholder-overlay {
   position: absolute;
@@ -26,10 +26,10 @@
 }
 /*Fix to center spinner on IE7.*/
 .overlay-spinner {
-  position:absolute;
-  width:300px;
-  z-index:2000;
-  left:50%;
+  position: absolute;
+  width: 300px;
+  z-index: 2000;
+  left: 50%;
 }
 
 .close-ting-search-spinner {
