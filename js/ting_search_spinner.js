@@ -34,6 +34,8 @@
       $('body').once().append('<div class="ting-search-spinner-placeholder-overlay-wrapper"><div class="ting-search-spinner-placeholder-overlay"></div></div><div class="ting-overlay-spinner-container"></div><div class="close-ting-search-spinner">' + Drupal.t('Stop search') + '</div>');
       $('.ting-search-spinner-placeholder-overlay').once().hide();
       $('.close-ting-search-spinner').once().hide();
+
+      // Install spinner on form submition.
       $('#search-block-form').submit(function(event, killPageLoad) {
         // Fix bug that assigns placeholder to value on input field, present at least in IE8.
         if ($('#edit-ting-search-extendform-creator-field').attr('placeholder') == $('#edit-ting-search-extendform-creator-field').val()) {
@@ -54,6 +56,17 @@
           }
           return false;
         }
+        startSpinner();
+        return true;
+      });
+      //Install spinner on facets, item title and object link.
+      $('.pane-ding-facetbrowser a, .search-result h3.title a, .search-result li.availability a, .ting-object .field-name-ting-title a').click(function(e) {
+        if (e.button != 1) {
+          startSpinner();
+        }
+      });
+
+      function startSpinner() {
         // Start spinner.
         var spinner = new Spinner(opts).spin();
         // Position elements.
@@ -69,8 +82,8 @@
         $('.ting-search-spinner-placeholder-overlay').show();
         $('.close-ting-search-spinner').show();
         disable_scroll();
-        return true;
-      });  
+      }
+
       // left: 37, up: 38, right: 39, down: 40,
       // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
       var keys = [37, 38, 39, 40];
