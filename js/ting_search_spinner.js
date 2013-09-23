@@ -60,8 +60,10 @@
         return true;
       });
       //Install spinner on facets, item title and object link.
-      $('.pane-ding-facetbrowser a, .search-result h3.title a, .search-result li.availability a, .ting-object .field-name-ting-title a').click(function() {
-        startSpinner();
+      $('.pane-ding-facetbrowser a, .search-result h3.title a, .search-result li.availability a, .ting-object .field-name-ting-title a').click(function(e) {
+        if (e.button != 1) {
+          startSpinner();
+        }
       });
 
       function startSpinner() {
